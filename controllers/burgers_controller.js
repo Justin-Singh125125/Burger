@@ -15,11 +15,20 @@ router.get("/", function (req, res) {
 
 
 })
-router.post("/", function (req, res) {
-
+router.post("/add-burger", function (req, res) {
+    burger.insertOne(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured], function (result) {
+        res.status(200).end();
+    })
 })
-router.put("/", function (req, res) {
-
+router.put("/update/:id", function (req, res) {
+    var condition = "id = " + req.params.id;
+    console.log(req.params.id);
+    burger.updateOne({ devoured: req.body.devoured }, condition, function (result) {
+        if (result.changedRows === 0) {
+            return res.status(404).end();
+        }
+        res.status(200).end();
+    })
 })
 router.delete("/", function (req, res) {
 

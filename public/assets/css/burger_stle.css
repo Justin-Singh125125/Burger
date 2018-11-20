@@ -33,3 +33,9 @@ html,body{
 .b{
 border-bottom: 2px solid red;
 }
+.card-body{
+    margin: 0 auto;
+    overflow: auto;
+    height: 400px;
+    text-align: left;
+}
