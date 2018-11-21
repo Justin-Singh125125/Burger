@@ -14,7 +14,7 @@ else {
         database: "burgers"
     });
 
-}
+};
 connection.connect();
 
 // Export connection for our ORM to use.
