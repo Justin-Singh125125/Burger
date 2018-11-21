@@ -32,5 +32,17 @@ $(document).ready(function () {
         })
     })
 
+    $(".delete").on("click", function () {
+
+        var id = $(this).data("id");
+
+        $.ajax("/delete/" + id, {
+            type: "DELETE"
+        }).then(function () {
+            console.log("Deleted Burger...");
+            location.reload();
+        })
+    })
+
 
 })

@@ -39,3 +39,33 @@ border-bottom: 2px solid red;
     height: 400px;
     text-align: left;
 }
+
+#right{
+   margin-right: auto;
+}
+#logo-title{
+    color: red;
+    font-weight: bold;
+}
+.nav-link, .navbar-brand{
+    color: white;
+    font-weight: bold;
+  
+}
+.nav-link{
+    font-size:20px;
+}
+.navbar-brand{
+    font-size: 30px;
+}
+
+.nav-link:hover, .navbar-brand:hover{
+    color: yellow;
+    font-weight: bold;
+}
+.navbar{
+    padding: 20px;
+}
+p{
+    font-size: 20px;
+}

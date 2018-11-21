@@ -1,4 +1,4 @@
-<nav id="home" class="navbar navbar-expand-lg navbar-light">
+<nav id="home" class="navbar navbar-expand-lg">
     <a class="navbar-brand" href="#">INO BURGLER</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
         aria-expanded="false" aria-label="Toggle navigation">
@@ -17,8 +17,8 @@
     </div>
 </nav>
 <div class="jumbotron">
-    <h1>In-N-Out Burgler</h1>
-    <img id="logo" src="./assets/images/logo.png" alt="">
+    <h1 id="logo-title">IN-N-OUT BURGER</h1>
+    <img id="logo" src="./assets/images/arrow.png" alt="">
 </div>
 
 
@@ -30,15 +30,17 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="menu-burgers">
-                            <h2 class="b">Our Burgers</h2>
+                            <h2 class="b">Menu Burgers</h2>
                         </div>
                     </div>
 
                     <div class="card-body">
                         {{#each burgers}}
                         {{#if this.devoured}}
-                        <p><img class="burg-img" src="./assets/images/inout.jpg" alt="">{{this.burger_name}}<button
-                                class="devour" data-id="{{this.id}}">Devour!</button></p>
+                        <p> <button id="right" type="button" class="devour btn btn-danger" data-id="{{this.id}}">Devour!</button><img
+                                class="burg-img" src="./assets/images/inout.jpg" alt="">{{this.burger_name}}
+
+                        </p>
                         {{/if}}
                         {{/each}}
                     </div>
@@ -57,9 +59,10 @@
                     <div class="card-body">
                         {{#each burgers}}
                         {{#unless this.devoured}}
-                        <p><img class="burg-img" src="./assets/images/inout.jpg" alt="">{{this.burger_name}}<button
-                                class="delete" data-id="{{this.id}}">Delete
-                                Waste!</button></p>
+                        <p> <button id="right" type="button" class="delete btn btn-danger" data-id="{{this.id}}">Delete
+                                Waste!</button><img class="burg-img" src="./assets/images/inout.jpg" alt="">{{this.burger_name}}
+
+                        </p>
                         {{/unless}}
                         {{/each}}
                     </div>
